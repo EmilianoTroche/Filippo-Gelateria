@@ -36,4 +36,4 @@ Este sitio web permite a los usuarios:
 
 1. Cloná el repositorio:
    ```bash
-   git clone https://github.com/tuusuario/filippo-gelateria.git
+   https://github.com/EmilianoTroche/Filippo-Gelateria.git
