@@ -1,6 +1,6 @@
-# 🍨 Heladería Delicia - Página Web
+# 🍨 Filippo Gelateria - Página Web
 
-Bienvenido al repositorio de **Heladería Delicia**, una página web diseñada para facilitar los pedidos online de helado, replicando la experiencia del local físico de forma digital.
+Bienvenido al repositorio de **Filippo Gelateria**, una página web diseñada para facilitar los pedidos online de helado, replicando la experiencia del local físico de forma digital.
 
 ## 🌐 Descripción
 
@@ -36,4 +36,4 @@ Este sitio web permite a los usuarios:
 
 1. Cloná el repositorio:
    ```bash
-   git clone https://github.com/tuusuario/heladeria-delicia.git
+   git clone https://github.com/tuusuario/filippo-gelateria.git
