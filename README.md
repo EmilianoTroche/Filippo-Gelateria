@@ -27,7 +27,7 @@ Este sitio web permite a los usuarios:
 - **Contacto**: información y/o formulario de contacto.
 - **Botón "Hacer Pedido"**: redirecciona al sistema de pedidos.
 
-### Sistema de pedidos (`pedido.html`)
+### Sistema de pedidos
 1. **Selección de litros**: elegí la cantidad deseada.
 2. **Selección de sabores**: según los litros elegidos.
 3. **Pago**: redireccionamiento a método de pago o confirmación de pedido.
