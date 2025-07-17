@@ -1,0 +1,322 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    min-height: 100vh;
+    padding: 32px;
+    background: linear-gradient(120deg, #181a1b, #23272b, #23272b, #181a1b);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    position: relative;
+    overflow-x: hidden;
+}
+
+@keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+.particle {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 0.12;
+    z-index: 0;
+    animation: floatParticle 14s linear infinite;
+}
+
+@keyframes floatParticle {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.12;
+    }
+    50% {
+        opacity: 0.22;
+        transform: translateY(-60px) scale(1.2);
+    }
+    100% {
+        transform: translateY(0) scale(1);
+        opacity: 0.12;
+    }
+}
+
+.particle1 {
+    width: 120px; height: 120px;
+    left: 8vw; top: 18vh;
+    background: #23272b;
+    animation-duration: 14s;
+}
+.particle2 {
+    width: 80px; height: 80px;
+    right: 10vw; bottom: 20vh;
+    background: #181a1b;
+    animation-duration: 10s;
+    animation-direction: reverse;
+}
+.particle3 {
+    width: 60px; height: 60px;
+    left: 65vw; top: 12vh;
+    background: #2d3237;
+    animation-duration: 18s;
+}
+.particle4 {
+    width: 100px; height: 100px;
+    left: 78vw; top: 62vh;
+    background: #23272b;
+    animation-duration: 20s;
+    animation-direction: reverse;
+}
+.particle5 {
+    width: 40px; height: 40px;
+    left: 28vw; bottom: 10vh;
+    background: #35393c;
+    animation-duration: 12s;
+}
+.particle6 {
+    width: 90px; height: 90px;
+    right: 22vw; top: 38vh;
+    background: #23272b;
+    animation-duration: 16s;
+}
+.particle7 {
+    width: 50px; height: 50px;
+    left: 18vw; bottom: 28vh;
+    background: #23272b;
+    animation-duration: 13s;
+    animation-direction: reverse;
+}
+.particle8 {
+    width: 70px; height: 70px;
+    right: 40vw; top: 70vh;
+    background: #35393c;
+    animation-duration: 17s;
+}
+.particle9 {
+    width: 30px; height: 30px;
+    left: 80vw; bottom: 8vh;
+    background: #2d3237;
+    animation-duration: 11s;
+    animation-direction: reverse;
+}
+
+body::before, body::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
+}
+body::before {
+    width: 120px;
+    height: 120px;
+    left: 10vw;
+    top: 20vh;
+    background: #23272b;
+    opacity: 0.09;
+    animation: floatParticle 14s linear infinite;
+}
+body::after {
+    width: 80px;
+    height: 80px;
+    right: 12vw;
+    bottom: 18vh;
+    background: #181a1b;
+    opacity: 0.09;
+    animation: floatParticle 10s linear infinite reverse;
+}
+
+h1 {
+    color: #e5e7eb;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 32px;
+    z-index: 1;
+    position: relative;
+    display: inline-block;
+    padding: 0 12px;
+    background: none;
+    border-radius: 0;
+    text-shadow:
+        0 0 8px #50c8ff,
+        0 0 16px #50c8ff,
+        0 0 24px #50c8ff,
+        0 0 32px #50c8ff;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: none;
+}
+
+h2 {
+    color: #d1d5db;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+button {
+    background: linear-gradient(90deg, #35393c 0%, #181a1b 100%);
+    color: #e5e7eb;
+    border: none;
+    padding: 10px 24px;
+    margin: 8px 4px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(24, 26, 27, 0.18);
+    transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+    z-index: 1;
+    position: relative;
+}
+
+
+button:hover, button:focus {
+    background: linear-gradient(90deg, #181a1b 0%, #35393c 100%);
+    box-shadow: 0 4px 16px rgba(24, 26, 27, 0.22);
+    transform: translateY(-2px) scale(1.03);
+    outline: none;
+}
+
+form {
+    background: linear-gradient(135deg, #23272b 0%, #101113 100%);
+    padding: 32px 24px;
+    margin: 32px auto;
+    border-radius: 10px;
+    box-shadow:
+        0 0 32px 8px rgba(80, 200, 255, 0.18),   /* halo azul cian */
+        0 4px 32px rgba(16, 17, 19, 0.45),        /* sombra base */
+        0 0 0 4px rgba(80, 200, 255, 0.10) inset; /* brillo interior suave */
+    max-width: 420px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    z-index: 1;
+    position: relative;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    color: #b0b3b8;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px 12px;
+    margin-top: 2px;
+    border: 1px solid #35393c;
+    border-radius: 5px;
+    font-size: 1rem;
+    background: #181a1b;
+    color: #e5e7eb;
+    transition: border 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border: 1.5px solid #e5e7eb;
+    outline: none;
+    background: #48515a;
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(55, 65, 81, 0.10);
+}
+
+input[type="file"] {
+    display: block;
+    margin-top: 8px;
+    color: #e5e7eb;
+    background: #181a1b;
+    border: 1px solid #35393c;
+    border-radius: 5px;
+    padding: 8px 0;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: border 0.2s, background 0.2s;
+}
+
+.custom-file-label {
+    display: inline-block;
+    background: #50c8ff;
+    color: #181a1b;
+    padding: 10px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 8px;
+    margin-bottom: 0;
+    transition: background 0.2s, color 0.2s;
+    text-align: center;
+    border: none;
+    box-shadow: 0 2px 8px rgba(80, 200, 255, 0.18);
+}
+.custom-file-label:hover, .custom-file-label:focus {
+    background: #36a3d9;
+    color: #fff;
+}
+
+input[type="file"]:focus {
+    border: 1.5px solid #50c8ff;
+    background: #23272b;
+    outline: none;
+}
+
+#imagenProducto{
+
+
+    background-color: #152b36;
+}
+
+
+
+#output {
+    color: #b0b3b8;
+    background: #181a1b;
+    padding: 12px;
+    border-radius: 6px;
+    min-height: 40px;
+    margin: 24px 0 0 0;
+    font-family: 'Consolas', monospace;
+    font-size: 1rem;
+    box-shadow: 0 1px 4px rgba(24, 26, 27, 0.10);
+    z-index: 1;
+    position: relative;
+}
+
+#previewImagenProducto {
+    display: block;
+    margin: 12px auto 0 auto;
+    max-width: 180px;
+    max-height: 180px;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px #0007;
+    object-fit: cover;
+    background: #23272b;
+}
+
+#productosContainer {
+    color: #a8a9ac;
+    background: linear-gradient(135deg, #23272b 0%, #101113 100%);
+    padding: 32px 24px;
+    margin: 32px auto;
+    border-radius: 10px;
+    box-shadow:
+        0 0 32px 8px rgba(80, 200, 255, 0.18),   /* halo azul cian */
+        0 4px 32px rgba(16, 17, 19, 0.45),        /* sombra base */
+        0 0 0 4px rgba(80, 200, 255, 0.10) inset; /* brillo interior suave */
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    z-index: 1;
+    position: relative;
+}

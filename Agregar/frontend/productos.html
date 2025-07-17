@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gestión de Productos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+   
+    <canvas id="particulas-bg" style="position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:0;pointer-events:none;"></canvas>
+    <div style="text-align:center;">
+      <h1>Gestión de Productos</h1>
+    </div>
+   <!-- ...existing code... -->
+<form id="formAgregarProducto" onsubmit="event.preventDefault();">
+    <h2>Agregar Producto</h2>
+    <label>Nombre: <input type="text" id="nombreProducto" required></label><br>
+    <label>Descripción: <input type="text" id="descripcionProducto" required></label><br>
+    <label>Precio: <input type="number" id="precioProducto" step="0.01" required></label><br>
+    <label for="imagenProducto" class="custom-file-label">Subir Imagen</label>
+    <input type="file" id="imagenProducto" accept="image/*" style="display:none;">
+    <img id="previewImagenProducto" style="display:none;" />
+    <button type="button" onclick="agregarProductoDesdeFormulario();">Agregar</button>
+</form>
+<!-- ...existing code... -->
+
+    <div id="productosContainer"></div>
+
+    <!-- Modal para mostrar la imagen -->
+<div id="modalImagen" style="display:none; position:fixed; z-index:9999; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.7); align-items:center; justify-content:center;">
+  <span id="cerrarModal" style="position:absolute; top:30px; right:40px; font-size:2.5rem; color:#fff; cursor:pointer;">&times;</span>
+  <img id="imgModal" src="" alt="Imagen producto" style="max-width:90vw; max-height:80vh; border-radius:12px; box-shadow:0 4px 32px #000a;">
+</div>
+
+    <script src="./js/producto.js"></script>
+    <script>
+    listarProductos();
+    </script>
+    <script src="particulas.js"></script>
+
+    <script>
+document.getElementById('imagenProducto').addEventListener('change', function(e) {
+    const file = e.target.files[0];
+    const preview = document.getElementById('previewImagenProducto');
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function(evt) {
+            preview.src = evt.target.result;
+            preview.style.display = 'block';
+        };
+        reader.readAsDataURL(file);
+    } else {
+        preview.src = '';
+        preview.style.display = 'none';
+    }
+});
+</script>
+</body>
+
+</html>

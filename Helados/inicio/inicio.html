@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filippo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="hero">
+        <nav style="display: flex; align-items: center; justify-content: space-between; height: 120px;">
+
+            <div style="flex: 1; display: flex; justify-content: center;">
+                <img src="../assets/Filippo.png" class="logo" alt="Logo"
+                    style="height:200px; border-radius:20px; display:block; margin:10 auto;">
+            </div>
+            <ul style="display: flex; align-items: center; margin: 0 40px 0 0; gap: 2rem;">
+
+                <li class="Sobre Nosotros">
+                    <a href="#nosotros"><i class="fas fa-home"></i> Sobre Nosotros</a>
+
+                <li class="Contacto">
+                    <a   target="_blank" href="/Helados/inicio/contacto.html"><i class="fas fa-envelope"></i> Contacto</a>
+                </li>
+
+                <li class="Sabores">
+                    <a href="#sabores"><i class="fas fa-ice-cream"></i> Sabores</a>
+                </li>
+
+                </li>
+            </ul>
+        </nav>
+        <div class="hero-content">
+            <h1>¡Bienvenido a Filippo!</h1>
+            <p>Los mejores helados artesanales, frescos y deliciosos.</p>
+            <a href="/Helados/sabores/kilos.html" class="btn">Hacer un pedido</a>
+        </div>
+        <div class="wave-helado">
+            <svg viewBox="0 0 1440 160" width="100%" height="160" preserveAspectRatio="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,0 
+      Q120,80 240,40 
+      Q360,0 480,100 
+      Q600,160 720,100 
+      Q840,40 960,100 
+      Q1080,160 1200,100 
+      Q1320,40 1440,80 
+      V160 H0 Z" fill="#221c4b" />
+
+            </svg>
+        </div>
+
+        <a href="#sabores" class="scroll-indicador" title="Desliza hacia abajo">
+            <div class="scrolldown" style="--color: skyblue">
+                <div class="chevrons">
+                    <div class="chevrondown"></div>
+                    <div class="chevrondown"></div>
+                </div>
+            </div>
+        </a>
+
+
+    </header>
+
+
+    <section id="sabores" class="tabla-sabores">
+        <h2>Nuestros Sabores</h2>
+        <div class="tabla-sabores-contenido">
+            <div class="columna">
+                <h3>🍦 Cremas:</h3>
+                <ul>
+                    <li>Vainilla</li>
+                    <li>Fior Di Latte</li>
+                    <li>Lemon Pie</li>
+                    <li>Tiramisú</li>
+                    <li>Frutilla</li>
+                    <li>Menta Granizada</li>
+                    <li>Banana Split</li>
+                    <li>Sambayón</li>
+                    <li>Cookies & Cream</li>
+                    <li>Tramontana</li>
+                    <li>Matilda</li>
+                    <li>Pistacchio</li>
+                    <li>Stracciatella</li>
+                </ul>
+            </div>
+            <div class="columna">
+                <h3>🍫 Chocolates:</h3>
+                <ul>
+                    <li>Chocolate</li>
+                    <li>Choco Blanco y Frutos Rojos</li>
+                    <li>Choco con Almendras</li>
+                </ul>
+                <h3>🍯 Dulces de Leche:</h3>
+                <ul>
+                    <li>DDL Pippo</li>
+                    <li>DDL c/ Brownie</li>
+                    <li>DDL Granizado</li>
+                </ul>
+            </div>
+            <div class="columna">
+                <h3>🍋 Sorbetes:</h3>
+                <ul>
+                    <li>Limón</li>
+                    <li>Mango</li>
+                    <li>Frutilla</li>
+                    <li>Frambuesa</li>
+                    <li>Choco al 70%</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section id="ofertas" class="ofertas">
+        <h2>Ofertas Especiales</h2>
+        <div class="ofertas-list">
+            <div class="oferta-card">
+                <h3>2x1 en Cucuruchos</h3>
+                <p>Todos los martes y jueves, llevate dos cucuruchos al precio de uno.</p>
+            </div>
+            <div class="oferta-card">
+                <h3>Descuento Estudiantil</h3>
+                <p>10% de descuento presentando tu credencial estudiantil.</p>
+            </div>
+            <div class="oferta-card">
+                <h3>Promo Familiar</h3>
+                <p>Comprando 1 kilo, te regalamos 1/4 kilo extra.</p>
+            </div>
+        </div>
+    </section>
+
+  <section id="galeria" class="galeria">
+  <h2>Galería del Local</h2>
+  <div class="galeria-fotos">
+    <img src="../assets/glaeria1.png" alt="Local Heladería" onclick="abrirLightbox(0)">
+    <img src="../assets/gleria2.png" alt="Interior Heladería" onclick="abrirLightbox(1)">
+    <img src="../assets/3.png" alt="Helados en mostrador" onclick="abrirLightbox(2)">
+    
+  </div>
+
+ <div id="lightbox" class="lightbox" onclick="cerrarLightbox()">
+  <span class="close">&times;</span>
+  <span class="arrow left" onclick="cambiarImagen(-1, event)">&#10094;</span>
+  <img id="lightbox-img" src="" alt="Galería grande">
+  <span class="arrow right" onclick="cambiarImagen(1, event)">&#10095;</span>
+</div>
+</section>
+
+   <section class="desplegable">
+  <div class="desplegable-header" onclick="toggleDesplegable(this)">
+    <h3>Sobre Nosotros</h3>
+    <i class="fas fa-chevron-down"></i>
+  </div>
+  <div class="desplegable-content">
+    <p>
+
+ 𝐄𝐧 𝐇𝐞𝐥𝐚𝐝𝐞𝐫í𝐚 𝐅𝐢𝐥𝐢𝐩𝐩𝐨 𝐜𝐫𝐞𝐞𝐦𝐨𝐬 𝐪𝐮𝐞 𝐞𝐥 𝐯𝐞𝐫𝐝𝐚𝐝𝐞𝐫𝐨 𝐡𝐞𝐥𝐚𝐝𝐨 𝐬𝐞
+                𝐡𝐚𝐜𝐞 𝐜𝐨𝐧 𝐩𝐚𝐬𝐢ó𝐧, 𝐝𝐞𝐝𝐢𝐜𝐚𝐜𝐢ó𝐧 𝐲 𝐟𝐫𝐞𝐬𝐜𝐮𝐫𝐚. 𝐏𝐨𝐫 𝐞𝐬𝐨,
+                𝐞𝐥𝐚𝐛𝐨𝐫𝐚𝐦𝐨𝐬
+                𝐠𝐞𝐥𝐚𝐭𝐨𝐬 𝐚𝐫𝐭𝐞𝐬𝐚𝐧𝐚𝐥𝐞𝐬 𝐚𝐥 𝐞𝐬𝐭𝐢𝐥𝐨 𝐭𝐫𝐚𝐝𝐢𝐜𝐢𝐨𝐧𝐚𝐥 𝐢𝐭𝐚𝐥𝐢𝐚𝐧𝐨, 𝐜𝐨𝐧
+                𝐢𝐧𝐠𝐫𝐞𝐝𝐢𝐞𝐧𝐭𝐞𝐬 𝐝𝐞 𝐜𝐚𝐥𝐢𝐝𝐚𝐝 𝐲 𝐬𝐢𝐧 𝐚𝐩𝐮𝐫𝐨𝐬.𝐂𝐚𝐝𝐚 𝐬𝐚𝐛𝐨𝐫 𝐪𝐮𝐞
+                𝐬𝐞𝐫𝐯𝐢𝐦𝐨𝐬 𝐞𝐬 𝐩𝐫𝐞𝐩𝐚𝐫𝐚𝐝𝐨 𝐚𝐥 𝐦𝐨𝐦𝐞𝐧𝐭𝐨, 𝐬𝐢𝐧 𝐚𝐥𝐦𝐚𝐜𝐞𝐧𝐚𝐫𝐥𝐨𝐬 𝐩𝐨𝐫
+                𝐝í𝐚𝐬. 𝐄𝐬𝐭𝐨 𝐧𝐨𝐬 𝐩𝐞𝐫𝐦𝐢𝐭𝐞 𝐨𝐟𝐫𝐞𝐜𝐞𝐫𝐭𝐞 𝐮𝐧 𝐡𝐞𝐥𝐚𝐝𝐨 𝐬𝐢𝐞𝐦𝐩𝐫𝐞
+                𝐟𝐫𝐞𝐬𝐜𝐨,
+                𝐜𝐫𝐞𝐦𝐨𝐬𝐨 𝐲 𝐜𝐨𝐧 𝐭𝐨𝐝𝐨 𝐬𝐮 𝐬𝐚𝐛𝐨𝐫 𝐧𝐚𝐭𝐮𝐫𝐚𝐥. 𝐍𝐨 𝐮𝐬𝐚𝐦𝐨𝐬 𝐩𝐫𝐞𝐦𝐞𝐳𝐜𝐥𝐚𝐬
+                𝐧𝐢 𝐜𝐨𝐧𝐬𝐞𝐫𝐯𝐚𝐧𝐭𝐞𝐬 𝐢𝐧𝐝𝐮𝐬𝐭𝐫𝐢𝐚𝐥𝐞𝐬: 𝐬𝐨𝐥𝐨 𝐫𝐞𝐜𝐞𝐭𝐚𝐬 𝐚𝐮𝐭é𝐧𝐭𝐢𝐜𝐚𝐬 𝐲
+                𝐦𝐮𝐜𝐡𝐨 𝐚𝐦𝐨𝐫 𝐩𝐨𝐫 𝐥𝐨 𝐪𝐮𝐞 𝐡𝐚𝐜𝐞𝐦𝐨𝐬.𝐏𝐨𝐫𝐪𝐮𝐞 𝐩𝐚𝐫𝐚 𝐧𝐨𝐬𝐨𝐭𝐫𝐨𝐬, 𝐞𝐥
+                𝐡𝐞𝐥𝐚𝐝𝐨 𝐧𝐨 𝐞𝐬 𝐮𝐧 𝐩𝐫𝐨𝐝𝐮𝐜𝐭𝐨... 𝐞𝐬 𝐮𝐧𝐚 𝐞𝐱𝐩𝐞𝐫𝐢𝐞𝐧𝐜𝐢𝐚.
+
+    </p>
+  </div>
+</section>
+
+    <footer>
+</a>
+  <div class="footer-row">
+    
+    <span>Vasconcellos 167, Colonia Del Sacramento, Colonia, Uruguay 70000.</span>
+    <span>Email: contacto@filippohelados.com</span>
+    
+    <span>&copy; 2025 Filippo Helados. Todos los derechos reservados.</span>
+  </div>
+</footer>
+
+    <script src="main.js"></script>
+
+    <script>
+        function toggleNosotros() {
+            const contenido = document.getElementById("contenidoNosotros");
+            contenido.style.display = contenido.style.display === "none" || contenido.style.display === "" ? "block" : "none";
+        }
+    </script>
+
+    <script>
+        function abrirLightbox(img) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightboxImg.src = img.src;
+            lightbox.style.display = 'flex';
+        }
+
+        function cerrarLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+    </script>
+
+    <script>
+        const scrollIndicador = document.querySelector('.scroll-indicador');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                scrollIndicador.classList.add('oculto');
+            } else {
+                scrollIndicador.classList.remove('oculto');
+            }
+        });
+    </script>
+
+
+<script>
+
+    function toggleDesplegable(header) {
+  const content = header.nextElementSibling;
+  const icon = header.querySelector("i");
+  content.classList.toggle("open");
+
+  // Alternar flecha
+  if (content.classList.contains("open")) {
+    icon.classList.remove("fa-chevron-down");
+    icon.classList.add("fa-chevron-up");
+  } else {
+    icon.classList.remove("fa-chevron-up");
+    icon.classList.add("fa-chevron-down");
+  }
+}
+</script>
+
+
+<script>
+    const imagenes = [
+  "../assets/glaeria1.png",
+  "../assets/gleria2.png",
+  "../assets/3.png"
+ 
+];
+
+let imagenActual = 0;
+
+function abrirLightbox(index) {
+  imagenActual = index;
+  document.getElementById("lightbox-img").src = imagenes[imagenActual];
+  document.getElementById("lightbox").style.display = "flex";
+}
+
+function cerrarLightbox() {
+  document.getElementById("lightbox").style.display = "none";
+}
+
+function cambiarImagen(direccion, event) {
+  event.stopPropagation(); // evita cerrar el lightbox al hacer clic en la flecha
+  imagenActual += direccion;
+  if (imagenActual < 0) imagenActual = imagenes.length - 1;
+  if (imagenActual >= imagenes.length) imagenActual = 0;
+  document.getElementById("lightbox-img").src = imagenes[imagenActual];
+}
+
+</script>
+
+<script>
+
+document.addEventListener("keydown", function (event) {
+  const lightbox = document.getElementById("lightbox");
+
+  // Si el lightbox no está visible, no hacer nada
+  if (lightbox.style.display !== "flex") return;
+
+  if (event.key === "ArrowLeft") {
+    cambiarImagen(-1, event);
+  } else if (event.key === "ArrowRight") {
+    cambiarImagen(1, event);
+  } else if (event.key === "Escape") {
+    cerrarLightbox();
+  }
+});
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,654 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  background-size: cover flex-direction: column;
+  scrollbar-color: #2C1F64 #f7c94b;
+  /* Para navegadores que soportan esta propiedad */
+  background-image: url(/Helados/assets/fondo.jpg);
+
+
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  background: #2C1F64;
+  /* Scroll azul */
+
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f7c94b;
+  /* Fondo amarillo */
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c9a440;
+  /* Fondo amarillo */
+}
+
+.ig {
+  position: absolute;
+  top: 50px;
+  left: 18px;
+  height: 48px;
+  width: 48px;
+  border-radius: 12px;
+  object-fit: contain;
+  z-index: 1100;
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+}
+
+.navbar.scrolled {
+  transition: background 1s, box-shadow 1s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  background-color: #362970ad;
+  opacity: 1;
+}
+
+.navbar {
+  Transition: background 2ss cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 4s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background 2s, box-shadow 1s;
+
+  background: rgba(24, 26, 27, 0.0);
+  /* transparente por defecto */
+
+  background-size: cover background-position: center;
+  background-repeat: no-repeat;
+  color: #f7c94b;
+  padding: 1rem 0;
+  top: 0;
+  height: 110px;
+  transition: top 5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  opacity: 1;
+}
+
+
+
+
+
+
+.sidebar {
+  top: 200px;
+  position: static;
+  width: 100%;
+  padding: 0;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+  /* Espacio debajo de la barra de búsqueda */
+}
+
+#busqueda-helado {
+  font-family: cursive;
+  text-align: center;
+  top: 200px;
+  width: 50%;
+  padding: 8px 12px;
+  border-radius: 15px;
+  border: 1px solid #1405e4;
+  font-size: 20px;
+  background: #052247;
+  color: #f7c94b;
+  outline: none;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  margin: 40px auto;
+  position: relative;
+}
+
+.search-bar input {
+  font-size: 1.2rem;
+  padding: 12px 24px;
+  border: 3px solid #ffc42a;
+  /* Borde amarillo */
+  border-radius: 24px;
+  font-family: 'Comic Neue', cursive, sans-serif;
+  width: 360px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.sugerencias {
+  position: absolute;
+  background: #2C1F64;
+  color: #f7c94b;
+  border-radius: 0 0 12px 12px;
+  width: 100%;
+  max-width: 380px;
+  max-height: 180px;
+  overflow-y: auto;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  z-index: 2000;
+  left: 230px;
+  top: 100%;
+  display: none;
+}
+.sugerencia-item {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.sugerencia-item:hover {
+  background: #f7c94b;
+  color: #2C1F64;
+}
+
+.search-bar input::placeholder {
+  color: #bfcc0c57;
+  font-style: italic;
+  text-align: center;
+}
+
+.search-bar input:focus {
+  outline: none;
+  box-shadow: 0 0 12px #0666b48f;
+}
+
+
+
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+a {
+  color: #f7c94b;
+  text-decoration: none;
+}
+
+.navbar a {
+  color: #f7c94b;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  text-align: center;
+  padding-top: 140px;
+  /* Ajusta según la altura real de tu navbar */
+  max-width: 900px;
+  /* Limita el ancho */
+  margin: 0 auto;
+  /* Centra el contenido */
+  box-sizing: border-box;
+}
+
+
+
+p {
+
+  font-size: 30px;
+}
+
+a {
+
+  color: #f7c94b;
+  margin 20px
+}
+
+
+
+
+/* Helados grid */
+h1 {
+  color: #f7c94b;
+  margin-bottom: 2rem;
+}
+
+#popup-circular {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 70px;
+  height: 70px;
+  background: #ffd700;
+  border-radius: 50%;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  cursor: pointer;
+}
+
+#popup-circular img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+}
+
+.modal-producto {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(1, 3, 12, 0.486);
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-producto.active {
+  display: flex;
+}
+
+.modal-content {
+  background: rgba(44, 31, 100, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 0 24px #00cfff33;
+  padding: 32px 24px 24px 24px;
+  max-width: 400px;
+  width: 90vw;
+  margin: 0 auto;
+  position: relative;
+}
+
+.cerrar-modal {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.modal-content h2 {
+  color: #f7c94b;
+  margin-bottom: 24px;
+  text-align: left;
+}
+
+.modal-content label {
+  display: block;
+  margin-bottom: 6px;
+  color: #f7c94b;
+  font-size: 1.1rem;
+}
+
+.modal-content input[type="text"],
+.modal-content input[type="number"] {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 16px;
+  border: 1px solid #222b36;
+  border-radius: 6px;
+  background: #181d23;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s;
+  box-sizing: border-box;
+}
+
+.modal-content input[type="text"]:focus,
+.modal-content input[type="number"]:focus {
+  border: 1.5px solid #00cfff;
+}
+
+.modal-content .custom-file-label,
+.modal-content button[type="button"],
+.modal-content button[type="submit"] {
+  display: block;
+  width: 100%;
+  background: #f7c94b;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 0;
+  margin: 18px 0 0 0;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px #00cfff33;
+  text-align: center;
+}
+
+.modal-content .custom-file-label:hover,
+.modal-content button[type="button"]:hover,
+.modal-content button[type="submit"]:hover {
+  background: #00cfff;
+}
+
+.modal-content #previewImagenProducto {
+  display: block;
+  margin: 10px auto 0 auto;
+  max-width: 120px;
+  border-radius: 8px;
+  box-shadow: 0 0 12px #00cfff55;
+}
+
+.boton-admin {
+  position: absolute;
+  /* Cambia de fixed a absolute */
+  left: 30px;
+  bottom: 30px;
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, #5260e2 0%, #10325e 100%);
+  color: #cef104;
+  border-radius: 50%;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  z-index: 2;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-decoration: none;
+}
+
+.boton-admin:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 24px #00eaff99;
+  color: #fff;
+}
+
+/* Animación de aparición para los helados */
+.helado {
+  width: 250px;
+  background-color: #362970;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1), transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+  text-align: center;
+  /* Centra el texto dentro de la caja */
+}
+
+.helado.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animación hover más suave */
+.helado {
+  transition:
+    opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 1.2s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    background 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.helado:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  background: #4b96f798;
+  color: #2d2566;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-row {
+  color: #bb8b08;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.Sabores {
+  position: absolute;
+  top: 57vw;
+  left: 35vw;
+
+}
+
+.footer-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.footer-row a {
+  color: #ffc34d;
+  text-decoration: none;
+}
+
+.helado-img {
+  top: -20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 250px;
+  /* Ajusta según prefieras */
+  border-radius: 6px;
+  margin-bottom: 15px;
+  background: transparent;
+}
+
+
+
+.helado-img img {
+
+  max-width: 100%;
+  max-height: 290px;
+  width: auto;
+  height: 350;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+.helado h2 {
+  font-size: 25px;
+  margin: 10px 0 5px;
+  color: #f7c94b;
+  text-align: center;
+  text-shadow:
+    -1px -1px 0 #222,
+    1px -1px 0 #222,
+    -1px 1px 0 #222,
+    1px 1px 0 #222;
+}
+
+
+
+.helado p {
+  text-shadow:
+    -1px -1px 0 #222,
+    1px -1px 0 #222,
+    -1px 1px 0 #222,
+    1px 1px 0 #222;
+  font-size: 19px;
+  color: #f7c94b;
+  text-align: center;
+  margin: 1%;
+}
+
+footer {
+  position: relative;
+  background-color: #201457;
+  color: white;
+  text-align: center;
+  padding: 20px;
+
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+    background: #232837;
+    background-image: url(/Helados/assets/fondo.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+
+
+    .logo {
+    position: absolute;
+    left: 3%;
+    top: -25px;
+    height: 100px;
+    width: auto;
+    margin: 0 auto;
+}
+
+
+  .navbar {
+    height: auto;
+    padding: 0.5rem 0;
+    position: static;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+  }
+
+  
+
+  .sidebar {
+    position: static;
+    width: 100%;
+    padding: 10px 0;
+    background: transparent;
+    text-align: center;
+  }
+
+  .main-content {
+    padding: 1rem 0.5rem 0.5rem 0.5rem;
+    max-width: 100vw;
+    padding-top: 120px;
+  }
+
+  .helados-container,
+  .helados {
+    flex-direction: column !important;
+    display: flex !important;
+    align-items: center;
+    gap: 18px;
+    padding: 0 2vw;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .helado {
+    width: 95vw;
+    max-width: 340px;
+    margin: 0 auto 18px auto;
+    padding: 18px 8px;
+  }
+
+  .helado-img {
+    height: 180px;
+    margin-bottom: 10px;
+  }
+
+  .helado-img img {
+    width: 100%;
+    max-width: 160px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .footer-row,
+  footer {
+    flex-direction: column !important;
+    gap: 8px;
+    font-size: 0.95rem;
+    padding: 18px 0;
+    text-align: center;
+  }
+
+  #popup-circular {
+    width: 54px;
+    height: 54px;
+    bottom: 18px;
+    right: 18px;
+  }
+
+  .modal-content {
+    max-width: 98vw;
+    padding: 14px 4vw 14px 4vw;
+  }
+
+  .menu {
+    font-size: 1.1rem;
+    gap: 10px;
+  }
+
+  .custom-file-label,
+  button[type="button"],
+  button[type="submit"] {
+    font-size: 1rem;
+    padding: 10px 0;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+}
+
+
+
+
+
+.helados {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 9000px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+  .helados {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    padding: 0 2vw;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .helado {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 10px 4px;
+  }
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="js.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Filippo Helados</title>
+    <link rel="stylesheet" href="kilos.css">
+    <link rel="icon" type="image/png" href="../assets/icon.png">
+</head>
+
+<body>
+
+    <header id="navbar" class="navbar">
+
+         <nav style="display: flex; align-items: center; justify-content: space-between; height: 120px;">
+
+            <div style="flex: 1; display: flex; justify-content: center;">
+                <img src="../assets/Filippo.png" class="logo" alt="Logo"
+                    style="height:200px; border-radius:20px; display:block; margin:10 auto;">
+            </div>
+            <ul style="display: flex; align-items: center; margin: 0 40px 0 0; gap: 2rem;">
+
+                <li class="Sobre Nosotros">
+                    <a href="#nosotros"><i class="fas fa-home"></i> Inicio</a>
+
+                <li class="Contacto">
+                    <a href="/Helados/inicio/contacto.html"><i class="fas fa-envelope"></i> Contacto</a>
+                </li>
+
+               
+
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <main class="main-content">
+
+        <div style="text-align:center; margin-bottom: 30px; margin-top: 30px;">
+            <h2 style="color: #ffe066; font-size: 2rem; font-family: inherit;">
+                ¿Cuántos litros vas a pedir? 😋
+            </h2>
+        </div>
+
+        <div class="helados">
+
+            <a href="index.html" class="helado-link" style="text-decoration: none; color: inherit;">
+                <div class="helado">
+                    <div class="helado-img">
+                        <img src="../assets/KilosHelados.png" alt="Helado"
+                            style="width:65%; height:65%; ; border-radius:6px;">
+                    </div>
+                    <h2>1/2 Litro</h2>
+                    <p>380$</p>
+                </div>
+
+                <a href="index.html" class="helado-link" style="text-decoration: none; color: inherit;">
+                    <div class="helado">
+                        <div class="helado-img">
+                            <img src="../assets/KilosHelados.png" alt="Helado"
+                                style="width:75%; height:75%; ; border-radius:6px;">
+                        </div>
+                        <h2>1 Litro</h2>
+                        <p>580$</p>
+
+                    </div>
+
+                    <a href="index.html" class="helado-link" style="text-decoration: none; color: inherit;">
+
+                        <div class="helado">
+                            <div class="helado-img">
+                                <img src="../assets/KilosHelados.png" alt="Helado"
+                                    style="width:90%; height:90%; border-radius:6px;">
+                            </div>
+                            <h2>1,5 Litro</h2>
+                            <p>850$</p>
+
+                        </div>
+
+                    </a>
+
+        </div>
+
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const helados = document.querySelectorAll('.helado');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    } else {
+                        entry.target.classList.remove('visible');
+                    }
+                });
+            }, { threshold: 0.2 });
+
+            helados.forEach(helado => observer.observe(helado));
+        });
+    </script>
+
+</body>
+
+</html>

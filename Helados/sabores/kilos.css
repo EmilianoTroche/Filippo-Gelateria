@@ -1,0 +1,571 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    background-size: cover flex-direction: column;
+    background-image: url(/Helados/assets/fondo.jpg);
+    overflow-x: hidden;
+
+}
+
+
+
+
+::-webkit-scrollbar {
+    width: 12px;
+    background: #2C1F64;
+    /* Scroll azul */
+
+}
+
+::-webkit-scrollbar-thumb {
+    background: #f7c94b;
+    /* Fondo amarillo */
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #c9a440;
+    /* Fondo amarillo */
+}
+
+.ig {
+    position: absolute;
+    top: 50px;
+    left: 18px;
+    height: 48px;
+    width: 48px;
+    border-radius: 12px;
+    object-fit: contain;
+    z-index: 1100;
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+}
+
+
+
+
+.navbar {
+    Transition: background 2ss cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 4s cubic-bezier(0.4, 0, 0.2, 1),
+        opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background 2s, box-shadow 1s;
+    background-color: #362970ad;
+    background-size: cover background-position: center;
+    background-repeat: no-repeat;
+    color: #f7c94b;
+    padding: 1rem 0;
+    top: 0;
+    height: 120px;
+    transition: top 5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    opacity: 1;
+}
+
+
+
+
+
+
+.sidebar {
+    position: absolute;
+    top: 140px;
+    left: 0;
+    width: 230px;
+    padding: 20px 10px;
+    background: transparent;
+    z-index: 900;
+}
+
+#busqueda-helado {
+    width: 90%;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #f7c94b;
+    font-size: 16px;
+    background: #2C1F64;
+    color: #f7c94b;
+    outline: none;
+}
+
+
+
+
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+
+
+
+
+.navbar a {
+
+    color: #f7c94b;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.main-content {
+    flex: 1;
+    padding: 2rem;
+    text-align: center;
+    padding-top: 140px;
+    /* Ajusta según la altura real de tu navbar */
+    max-width: 900px;
+    /* Limita el ancho */
+    margin: 0 auto;
+    /* Centra el contenido */
+    box-sizing: border-box;
+}
+
+
+
+p {
+
+    font-size: 30px;
+}
+
+
+
+
+
+
+/* Helados grid */
+h1 {
+    color: #2a0a9e;
+    margin-bottom: 2rem;
+}
+
+/* Animación de aparición para los helados */
+.helado {
+    background: linear-gradient(135deg, #fffbe6 0%, #ffe066 40%, #ffd700 70%, #bfa100 100%);
+    /* Opcional: brillo y profundidad */
+    box-shadow: 0 4px 24px rgba(191, 161, 0, 0.15);
+    border-radius: 20px;
+    width: 250px;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1), transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+    text-align: center;
+}
+
+.helado.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.helado {
+
+    background: linear-gradient(135deg, #070c35a1 0%, #0805c28f 40%, #131b859c 70%, #111380a9 100%);
+    box-shadow: 0 4px 24px rgba(191, 161, 0, 0.15);
+    border-radius: 30px;
+    transition:
+        box-shadow 1s ease,
+        transform 1s ease,
+        filter 1s ease;
+}
+
+.helado:hover {
+    box-shadow: 0 8px 32px rgba(23, 6, 173, 0.35), 0 0 20px #0538a5 inset;
+    transform: scale(1.05);
+    filter: brightness(1.08) saturate(1.2);
+    cursor: pointer;
+
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-row {
+    color: #bb8b08;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.footer-row a {
+    color: #ffc34d;
+    text-decoration: none;
+}
+
+.helado-img {
+    top: -20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 250px;
+    /* Ajusta según prefieras */
+    border-radius: 6px;
+    margin-bottom: 15px;
+    background: transparent;
+}
+
+
+
+.helado-img img {
+
+    max-width: 100%;
+    max-height: 290px;
+    width: auto;
+    height: 350;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+.helado h2 {
+    text-shadow:
+        -1px -1px 0 #222,
+        1px -1px 0 #222,
+        -1px 1px 0 #222,
+        1px 1px 0 #222;
+    font-size: 25px;
+    margin: 10px 0 5px;
+    color: #c0df11;
+    text-align: center;
+}
+
+.helado p {
+    font-size: 14px;
+    color: #7fdd04;
+    text-align: center;
+    margin: 1%;
+    text-shadow:
+        -1px -1px 0 #222,
+        1px -1px 0 #222,
+        -1px 1px 0 #222,
+        1px 1px 0 #222;
+}
+
+footer {
+    background-color: #201457;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+@media (max-width: 600px) {
+    .main-content {
+        padding: 1rem;
+        padding-top: 120px;
+        max-width: 100vw;
+    }
+
+    .helados {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 5px;
+    }
+
+    .helado {
+        width: 100%;
+        min-width: unset;
+        max-width: 350px;
+        margin: 0 auto;
+        padding: 10px 0;
+    }
+
+    
+
+    .helado-img {
+        height: 160px;
+    }
+
+    .helado-img img {
+        max-height: 140px;
+    }
+
+    header.navbar {
+        height: 80px !important;
+        padding: 0.5rem 0;
+    }
+
+    nav {
+        flex-direction: column;
+        height: auto !important;
+    }
+
+    .navbar ul {
+        gap: 1rem;
+        margin: 0 10px 0 0 !important;
+    }
+
+    h2 {
+        font-size: 1.2rem !important;
+    }
+}
+
+.logo {
+    position: absolute;
+    left: 3%;
+    top: -25px;
+    height: 100px;
+    width: auto;
+    margin: 0 auto;
+}
+
+
+/* Contenedor de los litros en fila y centrados */
+.helados {
+    display: flex;
+    flex-direction: row;
+    /* corregido */
+    justify-content: center;
+    align-items: stretch;
+    gap: 24px;
+    flex-wrap: nowrap;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+/* Tarjeta de litro: más grande y espaciosa */
+.helado {
+    border-radius: 40px;
+    box-shadow: 0 4px 24px #0003;
+    padding: 20px 8px 16px 8px;
+    text-align: center;
+    min-width: 0;
+    flex: 1 1 0;
+    max-width: 220vw;
+    max-height: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+    transition: transform 0.2s;
+}
+
+.helado-img {
+    width: 100%;
+    max-width: 220px;
+    height: 220px;
+    margin: 0 auto 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.helado-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 6px;
+    display: block;
+}
+
+.helado h2 {
+    margin: 10px 0 4px 0;
+    font-size: 1.1rem;
+    color: #ffe066;
+}
+
+.helado p {
+    margin: 0;
+    font-size: 1rem;
+    color: #bfff00;
+    font-weight: bold;
+}
+
+/* Responsive: en móvil, quepan los 3 en la pantalla y no se estiren */
+@media (max-width: 600px) {
+    .helados {
+        gap: 12px;
+        padding: 0 2vw;
+    }
+
+    .helado {
+        max-width: 31vw;
+        /* Más ancho, 3 entran justos */
+        min-width: 31vw;
+        width: 31vw;
+        max-height: 180px;
+        padding: 12px 4px 12px 4px;
+    }
+
+    .helado-img {
+        max-width: 80px;
+        height: 70px;
+    }
+
+    .helado-img img {
+        max-width: 70px;
+        max-height: 70px;
+    }
+
+    .helado h2 {
+        font-size: 1.1rem !important;
+    }
+
+    .helado p {
+        font-size: 1rem !important;
+    }
+}
+
+/* Responsive: en móvil, los helados en columna y centrados */
+@media (max-width: 600px) {
+    .helados {
+        flex-direction: column;
+        /* Cambia a columna */
+        align-items: center;
+        /* Centra las tarjetas */
+        gap: 18px;
+        padding: 0 0;
+        /* sin padding horizontal extra */
+    }
+
+    .helado {
+        width: 60vw;
+        max-width: 320px;
+        min-width: unset;
+        margin: 0 auto;
+        padding: 16px 0;
+        box-sizing: border-box;
+    }
+
+    .helado-img {
+        max-width: 160px;
+        height: 110px;
+    }
+
+    .helado-img img {
+        max-width: 140px;
+        max-height: 100px;
+    }
+}
+
+
+a {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+a.learn-more {
+    width: 12rem;
+    height: auto;
+}
+
+
+
+.learn-more-wrapper {
+    position: absolute;
+    top: 108px;
+    /* 50px (IG top) + 48px (IG height) + 10px separación extra */
+    left: 18px;
+    z-index: 1100;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+a.learn-more .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background: #ffe066;
+    border: #0538a5;
+    border-radius: 1.625rem;
+}
+
+a.learn-more .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #2a0a9e;
+}
+
+a.learn-more .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+}
+
+a.learn-more .circle .icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.29rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #2a0a9e;
+    border-right: 0.125rem solid #2a0a9e;
+    transform: rotate(45deg);
+}
+
+a.learn-more .button-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin: 0 0 0 1.85rem;
+    color: #28293600;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+a:hover .circle {
+    width: 100%;
+}
+
+a:hover .circle .icon.arrow {
+    background: #2a0a9e;
+    transform: translate(1rem, 0);
+}
+
+a:hover .button-text {
+    color: #2a0a9e;
+}
