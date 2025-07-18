@@ -20,11 +20,11 @@ Este sitio web permite a los usuarios:
 
 ## 📑 Secciones principales
 
-### Página principal (`index.html`)
+### Página principal
 - **Tabla de Sabores**: igual a la tabla física del local.
 - **Galería**: imágenes reales del local y productos.
 - **Sobre Nosotros**: historia y visión de la heladería.
-- **Contacto**: información y/o formulario de contacto.
+- **Contacto**: formulario de contacto.
 - **Botón "Hacer Pedido"**: redirecciona al sistema de pedidos.
 
 ### Sistema de pedidos
